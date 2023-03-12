@@ -1,0 +1,95 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-Medium.ttf');
+         font-weight: 500;
+  }
+
+* {
+    box-sizing: border-box;
+}
+
+.cssBayan {
+    max-width: 40%;
+    margin: 0 auto;
+}
+
+.cssBayan__title,
+label {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.cssBayan__title {
+    text-align: center;
+}
+
+.cssBayan__tab label input {
+    display: none;
+}
+
+.cssBayan__tab {
+    width: 100%;
+    margin-top: 10px;
+    padding: 20px;
+    cursor: pointer;
+    background: #719ce2;
+}
+
+.label__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.cssBayan__tab label {
+    width: 100%;
+    color: #3e4acf;
+    cursor: pointer;
+}
+
+.cssBayan__tab label .content {
+    overflow: hidden;
+    transition: all 0.3s;
+    max-height: 0;
+}
+
+.cssBayan__tab label .content .content__img {
+    display: block;
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 15px;
+    padding-bottom: 0;
+}
+
+.cssBayan__tab input:checked ~ .content,
+.cssBayan__tab label:hover > .content {
+    max-height: 100vh;
+    cursor: pointer;
+}
+
+.cssBayan__tab input:checked ~ .label__wrap p {
+    color: #000000;
+}
+
+.icon {
+    width: 15px;
+    display: none;
+    transition: all 0.4s ease;
+}
+
+.cssBayan__tab input:checked ~ .icon,
+.cssBayan__tab label:hover > .label__wrap .icon {
+    transform: rotate(180deg);
+}
+
+.cssBayan:hover .icon {
+    display: block;
+}
+
+.cssBayan:hover .label__wrap p {
+    color: #000000;
+}
+
+.label__wrap p {
+    margin: 0;
+}
