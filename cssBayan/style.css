@@ -55,7 +55,7 @@
 .cssBayan__tab label .content .content__img {
     display: block;
     width: 100%;
-    padding: 2vw 5vw 0;
+    padding: 2vw 9vw 0;
 }
 
 .cssBayan__tab input:checked ~ .content {
