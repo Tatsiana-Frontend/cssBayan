@@ -1,11 +1,12 @@
 @font-face {
     font-family: 'Poppins';
     src: url('fonts/Poppins-Medium.ttf');
-         font-weight: 500;
-  }
+    font-weight: 500;
+}
 
 * {
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .cssBayan {
@@ -13,13 +14,9 @@
     margin: 0 auto;
 }
 
-.cssBayan__title,
-label {
+.cssBayan__title {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
-}
-
-.cssBayan__title {
     text-align: center;
 }
 
@@ -29,40 +26,39 @@ label {
 
 .cssBayan__tab {
     width: 100%;
-    margin-top: 10px;
-    padding: 20px;
+    margin-top: 0.5em;
     cursor: pointer;
-    background: #719ce2;
+    background: #ffffff;
+    border-radius: 1vw;
+    box-shadow: 0px 0px 10px 0px rgb(100 114 173 / 30%);
 }
 
 .label__wrap {
     display: flex;
     justify-content: space-between;
-    align-items: start;
+    align-items: center;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 .cssBayan__tab label {
-    width: 100%;
-    color: #3e4acf;
+    padding: 1em;
     cursor: pointer;
 }
 
 .cssBayan__tab label .content {
     overflow: hidden;
-    transition: all 0.3s;
+    transition: all 1.5s ease;
     max-height: 0;
 }
 
 .cssBayan__tab label .content .content__img {
     display: block;
-    max-width: 50%;
-    margin: 0 auto;
-    padding: 15px;
-    padding-bottom: 0;
+    width: 100%;
+    padding: 2em 10em;
 }
 
-.cssBayan__tab input:checked ~ .content,
-.cssBayan__tab label:hover > .content {
+.cssBayan__tab input:checked ~ .content {
     max-height: 100vh;
     cursor: pointer;
 }
@@ -72,24 +68,56 @@ label {
 }
 
 .icon {
-    width: 15px;
-    display: none;
-    transition: all 0.4s ease;
+    max-width: 0.8em;
+    width: 100%;
+    transition: all 0.5s ease;
 }
 
-.cssBayan__tab input:checked ~ .icon,
-.cssBayan__tab label:hover > .label__wrap .icon {
+.cssBayan__tab input:checked ~ .label__wrap .icon {
     transform: rotate(180deg);
-}
-
-.cssBayan:hover .icon {
-    display: block;
-}
-
-.cssBayan:hover .label__wrap p {
-    color: #000000;
 }
 
 .label__wrap p {
     margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.2vw;
+    color: #4b53ab;
+}
+
+.cssBayan__tab label:active {
+    outline: none;
+    opacity: 0.5;
+}
+
+@media (hover: hover) {
+    .cssBayan__tab label:hover > .label__wrap .icon {
+        transform: rotate(180deg);
+    }
+
+    .cssBayan__tab label:hover > .content {
+        max-height: 100vh;
+        cursor: pointer;
+    }
+
+    .cssBayan:hover .icon {
+        opacity: 1;
+    }
+
+    .cssBayan:hover .label__wrap p {
+        color: #000000;
+    }
+}
+
+@media screen and (min-width: 821px) {
+    .cssBayan .icon {
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .cssBayan {
+        max-width: 100%;
+        margin: 0 2em;
+    }
 }
