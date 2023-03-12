@@ -55,7 +55,7 @@
 .cssBayan__tab label .content .content__img {
     display: block;
     width: 100%;
-    padding: 2em 10em;
+    padding: 2vw 5vw 0;
 }
 
 .cssBayan__tab input:checked ~ .content {
@@ -119,5 +119,13 @@
     .cssBayan {
         max-width: 100%;
         margin: 0 2em;
+    }
+
+    .cssBayan__tab label .content .content__img {
+        padding: 3vw 25vw 0;
+    }
+
+    .label__wrap p {
+        font-size: 1.8vw;
     }
 }
